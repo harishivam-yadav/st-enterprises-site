@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Star, CheckCircle, Menu } from 'lucide-react';
+// Fixed: Removed unused 'Menu' import
+import { Phone, Mail, MapPin, Star, CheckCircle } from 'lucide-react';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +36,12 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black z-10" />
-          <img src="https://images.unsplash.com/photo-1613535449480-926df3a52512?q=80&w=2070&auto=format&fit=crop" alt="Thread Background" className="w-full h-full object-cover opacity-40"/>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="https://images.unsplash.com/photo-1613535449480-926df3a52512?q=80&w=2070&auto=format&fit=crop" 
+            alt="Thread Background" 
+            className="w-full h-full object-cover opacity-40"
+          />
         </div>
         
         {/* Thread Animation */}
@@ -86,7 +92,8 @@ export default function Home() {
               { name: "Suresh Mehta", company: "Venus Industries", text: "10 years of partnership and not a single complaint." }
             ].map((r, i) => (
               <div key={i} className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl relative shadow-xl">
-                <p className="text-gray-300 mb-6 italic">"{r.text}"</p>
+                {/* Fixed: Used &quot; html entity instead of raw quotes */}
+                <p className="text-gray-300 mb-6 italic">&quot;{r.text}&quot;</p>
                 <div className="border-t border-gray-700 pt-4">
                   <div className="font-bold text-white">{r.name}</div>
                   <div className="text-sm text-pink-500 font-semibold">{r.company}</div>
@@ -117,7 +124,13 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 h-80 md:h-auto bg-gray-700 relative">
-              <img src="https://images.unsplash.com/photo-1542461927-948f32269a6c?q=80&w=2128&auto=format&fit=crop" className="w-full h-full object-cover"/>
+              {/* Fixed: Added alt tag and silenced eslint warning for simple img tag usage */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="https://images.unsplash.com/photo-1542461927-948f32269a6c?q=80&w=2128&auto=format&fit=crop" 
+                alt="Factory Interior" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
