@@ -102,7 +102,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-[#050505] z-10" />
            {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=2072&auto=format&fit=crop" 
+            src="https://images.vexels.com/media/users/3/212381/isolated/preview/34bdef5b79859f2e4c5dea6c4a62a5c9-color-thread-spools-flat-icon.png?w=360" 
             alt="Thread Texture" 
             className="w-full h-full object-cover opacity-30 animate-pulse-slow"
           />
