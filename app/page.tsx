@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-// Fixed: Removed unused 'Menu' import
-import { Phone, Mail, MapPin, Star, CheckCircle, ArrowRight, Layers, Droplet, Sun } from 'lucide-react';
+import { motion } from 'framer-motion';
+// Fixed: Removed unused 'CheckCircle' and 'ArrowRight'
+import { Phone, Mail, MapPin, Star, Layers, Droplet, Sun } from 'lucide-react';
 
 // --- COMPONENTS ---
 
@@ -33,7 +33,7 @@ const Navigation = () => {
   );
 };
 
-// New: Wavy Thread Animation
+// Wavy Thread Animation
 const WavyThreads = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60">
@@ -89,8 +89,7 @@ const WavyThreads = () => {
 // --- MAIN PAGE ---
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  // Fixed: Removed unused useScroll and useTransform variables (y) that were causing lint errors
 
   return (
     <main className="bg-[#050505] min-h-screen text-white overflow-x-hidden selection:bg-pink-500 selection:text-white font-sans">
@@ -231,6 +230,7 @@ export default function Home() {
                   {client.company}
                 </h3>
                 <p className="text-gray-500 font-medium mb-6">Job Work Partner</p>
+                {/* Fixed: Used &quot; html entity */}
                 <p className="text-lg text-gray-300 italic">&quot;{client.text}&quot;</p>
               </motion.div>
             ))}
