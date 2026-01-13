@@ -285,7 +285,7 @@ export default function Home() {
               <div className="md:w-1/2 min-h-[400px] relative">
                  {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="https://images.unsplash.com/photo-1542461927-948f32269a6c?q=80&w=2128&auto=format&fit=crop" 
+                  src="https://www.sanathan.com/static/media/Shades-of-cotton-yarn-spun-and-dyed-in-Britain.dca41c0e.jpg" 
                   alt="Industrial Thread Dyeing Machine" 
                   className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
                 />
